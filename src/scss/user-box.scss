@@ -1,0 +1,94 @@
+@import "./variables.scss";
+
+.user-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $primary;
+  padding: 26px;
+  border-radius: 32px;
+  box-sizing: border-box;
+  color: white;
+
+  @media screen and (max-width: $mediumScreen) {
+    flex-direction: row;
+    align-items: end;
+  }
+
+  h1 {
+    margin: 20px 0;
+    line-height: 1em;
+
+    @media screen and (max-width: $mediumScreen) {
+      margin: 0 0 20px;
+    }
+  }
+
+  &-wrapper {
+    @media screen and (max-width: $mediumScreen) {
+      flex-direction: row;
+      width: 74%;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (max-width: $mediumScreen) {
+      width: 20%;
+      min-width: 130px;
+      margin-right: 26px;
+    }
+  }
+
+  &__border {
+    width: 100%;
+    height: 1px;
+    background-color: $borderLine;
+    margin: 23px 0;
+  }
+
+  &__email {
+    font-size: 14px;
+    color: $lightTextColor;
+  }
+
+  &__location {
+    font-size: 14px;
+    color: $lightTextColor;
+  }
+
+  &__recivier {
+    display: flex;
+    align-items: center;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &-box {
+      display: flex;
+      border: 1px solid $borderLine;
+      border-radius: 16px;
+      padding: 12px;
+      margin-left: 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      &:hover {
+        border-color: white;
+      }
+    }
+
+    img {
+      margin-right: 10px;
+    }
+
+    &-name {
+      font-weight: 900;
+    }
+  }
+}

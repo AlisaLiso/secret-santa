@@ -1,0 +1,43 @@
+@import "./variables.scss";
+
+input[type="number"] {
+  position: relative;
+  width: 150px;
+  background-color: teal;
+  padding: 0;
+
+  color: $popColor;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: right;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  background-color: $bgPage;
+  cursor: pointer;
+
+  @media screen and (max-width: $mobileHeaderScreen) {
+    text-align: center;
+    width: 100%;
+  }
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+label {
+  position: absolute;
+  width: max-content;
+  font-size: 12px;
+  bottom: 0;
+  right: 0;
+
+  @media screen and (max-width: $mobileHeaderScreen) {
+    position: relative;
+    right: 50%;
+    top: 0;
+    transform: translateX(50%);
+  }
+}
